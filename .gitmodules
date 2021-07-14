@@ -1,0 +1,10 @@
+[submodule "fiware/context.Orion-LD"]
+	path = fiware/context.Orion-LD
+	url = https://github.com/mdespland/context.Orion-LD.git
+	branch = FIWARE_8.0_arm64
+[submodule "fiware/mintaka"]
+	path = fiware/mintaka
+	url = https://github.com/FIWARE/mintaka.git
+[submodule "fiware/timescaledb-docker"]
+	path = fiware/timescaledb-docker
+	url = https://github.com/timescale/timescaledb-docker.git

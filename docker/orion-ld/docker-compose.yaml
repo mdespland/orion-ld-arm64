@@ -1,0 +1,17 @@
+version: "3.3"
+services:
+  mongo:
+    image: mongo:4.4
+    command: --nojournal
+  orion:
+    image: marcdespland/orion-ld:FIWARE_8.0_arm64
+    depends_on:
+      - mongo
+    command: -dbhost mongo -logLevel DEBUG  -forwarding
+  test:
+    image: marcdespland/test-ngsi-ld:1.0.0
+    depends_on:
+      - orion
+    environment: 
+      - ORION_API=http://orion:1026
+    
