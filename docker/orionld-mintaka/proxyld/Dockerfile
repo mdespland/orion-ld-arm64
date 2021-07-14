@@ -23,7 +23,7 @@ COPY . /app/
 RUN npm install
 ENV PROXY_LISTEN_PORT=8080
 ENV PROXY_LISTEN_IP=0.0.0.0
-ENV ORION_API_URL=http://172.29.1.101:1026/ngsi-ld/v1
-ENV MINTAKA_API_URL=http://172.29.1.103:8080
+ENV ORION_API_URL=http://orion:1026/ngsi-ld/v1
+ENV MINTAKA_API_URL=http://mintaka:8080
 ENV BASE_PATH_NGSILD=/ngsi-ld/v1
 ENTRYPOINT ["npm", "start"]
